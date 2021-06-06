@@ -1,0 +1,46 @@
+<div class="wrapper">
+    <div class="sidebar" data-color="danger" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+        <app-sidebar></app-sidebar>
+        <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div>
+    </div>
+    <div class="main-panel">
+   <app-navbar></app-navbar>
+   <div style="margin-top: 8%;">    
+
+<div style=" margin-top: -2%;" *ngIf = 'isOrderReview == true' >
+        
+        <table class="table table-bordered" style="table-layout: fixed;margin-left: -35%;border: 0px;width: 100%;margin-top: -3%;">
+                <thead>
+                 <h3 style="text-align: center;color: gray;margin-top: 2% !important; " tabindex="0"> <strong><span>Accepted Form List </span></strong> </h3>
+                </thead>
+            </table>
+    <table class="table table-hover table-bordered table-condensed"style="margin-top: 1%;width: 90%; margin-left: 4%; margin-top: -2%;"> 
+      <thead>
+            <tr>
+                <th><strong>InquiryId.</strong></th>
+                <th><strong>Product Name</strong></th>
+                <th><strong>Total Cost</strong></th>
+                <th><strong>Nubmer Of Units</strong></th>
+                <th><strong>Inquiry Date</strong></th>
+                <th><strong>Ack Order</strong> </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of enquiryList;let i = index;">
+                <td>{{item.inquiry_id}}</td>
+                <td>{{item.tbl_inquiry_productName}}</td>
+                <td>{{item.tbl_inquiry_total_product_cost}}</td>
+                <td>{{item.tbl_inquiry_no_of_product}}</td>
+                <td>{{item.tbl_inquiry_order_recd_date | date :'fullDate'}}</td>
+                <td><button type="button" class="btn btn-danger" (click)='ackOrder(item.inquiry_id)'> Ack Order </button></td>  
+              </tr>
+        </tbody>
+        </table>
+</div>
+<div *ngIf = 'isOrderAck == true'>
+   <app-ack-order
+   [submittedListOfData]=orderToAck (sendDataBackButtonEvent) ="onStateChanged($event)"></app-ack-order>
+</div>
+</div>
+</div>
+</div>

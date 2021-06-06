@@ -1,0 +1,61 @@
+<div class="logo">
+    <a href="https://www.creative-tim.com" class="simple-text">
+        <div class="logo-img">
+            <img src="/assets/img/angular2-logo-red.png"/>
+        </div>
+        New Proj
+    </a>
+</div>
+<div class="sidebar-wrapper">
+
+    <ul class="nav">
+        <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link"  >
+                <i class="material-icons">dashboard</i>
+                <p>Dashboard</p>
+            </a>
+        </li>
+        <!-- <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" >
+                <i class="material-icons">content_paste</i>
+                <p>Pages</p>
+            </a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" >
+                <i class="material-icons">pages</i>
+                <p>Categories</p>
+            </a>
+        </li>
+        <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" data-toggle="collapse" data-target="#demo" >
+                <i class="material-icons">bubble_chart</i>
+                <p>Sales and Marketing</p>
+            </a>
+        </li> -->
+        <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" data-toggle="collapse" data-target="#Questionnaire" >
+                <i class="material-icons">bubble_chart</i>
+                <p>Questionnaire</p>
+            </a>
+        </li>
+    </ul>
+    <div id="demo" class="collapse">
+        <ul class="nav" style="margin-left: 10%;">
+          <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/enquiry']"><b>Enquiry</b></a></li>
+          <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/enquiryReviewComponent']"><b>Enquiry Review</b></a></li>
+          <!-- <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/oAAmendmentComponent']"><b>OA Amendment</b></a></li> -->
+          <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/orderReview']"><b>Order Review</b></a></li>
+          <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/orderAcknowledgmentComponent']"><b>Order Acknowledgemant</b></a></li>
+          <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/contractReviewComponent']"><b>Contract Review</b></a></li>
+          <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/monitoringSalesProcessComponent']"><b>Monitoring Sales Process</b></a></li>
+        </ul>
+      </div>
+    
+      <!-- Questionnaire Section -->
+      <div id="Questionnaire" class="collapse">
+        <ul class="nav" style="margin-left: 10%;">
+          <li routerLinkActive="active" class="nav-item"><a class="nav-link" [routerLink]="['/questionnaire']"><b>MCQ Question</b></a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,109 @@
+<div class="form_wrapper">
+  <div class="form_container">
+    <div class="title_container">
+       <a style="margin-left: 95%;cursor: pointer;" (click)="cancle()"><i class="fa fa-window-close" aria-hidden="true"></i></a>
+      <h2> Registration Form </h2>
+
+    </div>
+    <div class="row clearfix">
+        <form [formGroup]="registrationForm" (ngSubmit)="onRegSubmit()">
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-envelope"></i></span>
+            <input type="email"   formControlName="regEmail" name="regEmail"
+             placeholder="Email"  class="form-control" 
+             [ngClass]="{ 'is-invalid': submitted && f.regEmail.errors }"/>
+             <div *ngIf="submitted && f.regEmail.errors" class="invalid-feedback">
+              <div *ngIf="f.regEmail.errors.required">Email is required</div>
+              <div *ngIf="f.regEmail.errors.email">Email must be a valid email address</div>
+            </div>
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password"  formControlName="regPassword" 
+            name="regPassword" placeholder="Password" class="form-control"  
+            [ngClass]="{ 'is-invalid': submitted && f.regPassword.errors }" />
+             <div  *ngIf="submitted && f.regPassword.errors" class="invalid-feedback">
+              <div *ngIf="f.regPassword.errors.required">Password is required</div>
+              <div *ngIf="f.regPassword.errors.pattern">Password must be valid </div>
+            </div>
+          </div>
+
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-lock"></i></span>
+            <input type="password"  formControlName="regResetPassword" 
+            name="regResetPassword" placeholder="Re-type Password" class="form-control"  
+            [ngClass]="{ 'is-invalid': submitted && f.regResetPassword.errors }" />
+             <div  *ngIf="submitted && f.regResetPassword.errors" class="invalid-feedback">
+              <div *ngIf="f.regResetPassword.errors.required">Password is required</div>
+              <div *ngIf="f.regResetPassword.errors.pattern">Password must be valid </div>
+            </div>
+          </div>
+
+          <div class="row clearfix">
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="regFirstName" 
+                formControlName="regFirstName"  placeholder="First Name" class="form-control"  
+                [ngClass]="{ 'is-invalid': submitted && f.regFirstName.errors }"  />
+                <div  *ngIf="submitted && f.regFirstName.errors" class="invalid-feedback">
+                <div *ngIf="f.regFirstName.errors.required">First Name is required</div>
+                </div>
+              </div>
+            </div>
+            <div class="col_half">
+              <div class="input_field"> <span><i aria-hidden="true" class="fa fa-user"></i></span>
+                <input type="text" name="regLastName"  
+                formControlName="regLastName" placeholder="Last Name" class="form-control"  
+                [ngClass]="{ 'is-invalid': submitted && f.regLastName.errors }" />
+                <div  *ngIf="submitted && f.regLastName.errors" class="invalid-feedback">
+                <div *ngIf="f.regLastName.errors.required">Last Name is required</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="input_field"> <span><i aria-hidden="true" class="fa fa-birthday-cake"></i></span>
+            <input type="number" name="name" id ='age'
+            formControlName="regAge"  class="form-control"  
+            placeholder="Enter User Age "
+            [ngClass]="{ 'is-invalid': submitted && f.regAge.errors }" />
+            <div  *ngIf="submitted && f.regAge.errors" class="invalid-feedback">
+              <div *ngIf="f.regAge.errors.required">Age is required</div>
+              </div>
+          </div>
+          
+            <div class="input_field"> <span><i aria-hidden="true" class="fa fa-phone"></i></span>
+              <input type="number"  placeholder="Enter phone Number"
+              formControlName="regPhoneNumber"  class="form-control"  
+              [ngClass]="{ 'is-invalid': submitted && f.regPhoneNumber.errors }"/>
+              <div  *ngIf="submitted && f.regPhoneNumber.errors" class="invalid-feedback">
+                <div *ngIf="f.regPhoneNumber.errors.required">Phone Number is required</div>
+                <div *ngIf="f.regPhoneNumber.errors.pattern"> Phone Number must be valid </div>
+                </div>
+            </div>
+          
+            	<div class="input_field radio_option">
+                <input type="radio" name="regGender" id="rd1" value="male" formControlName="regGender" class="form-control" >
+                <label for="rd1">Male</label>
+                <input type="radio" name="regGender" id="rd2" value="female" formControlName="regGender" class="form-control" >
+                <label for="rd2">Female</label>
+              </div>
+              <div class="input_field select_option">
+                <select formControlName="regExpertiese"  class="form-control" 
+                [ngClass]="{ 'is-invalid': submitted && f.regExpertiese.errors }">
+                  <option disabled value="">Select Prepairation Area</option>
+                  <option value="CGPSC">CGPSC</option>
+                  <option value="VYAPAM">VYAPAM</option>
+                  <option value="Others">Others</option>
+                </select>
+                <div class="invalid-feedback" *ngIf="submitted && f.regExpertiese.errors">
+                  <div *ngIf="f.regExpertiese.errors.required">
+                    Prepairation Area selection is required
+                  </div>
+                </div>
+              </div>
+            <div class="input_field checkbox_option">
+            	<input type="checkbox" id="cb1" formControlName="regTermAndCondition" class="form-control" />
+    			    <label for="cb1">I agree with terms and conditions</label>
+            </div>
+          <input class="button" type="submit" value="Register" />
+        </form>
+    </div>
+  </div>
+</div>

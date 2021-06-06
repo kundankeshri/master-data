@@ -1,0 +1,98 @@
+<div class="form_wrapper">
+  <div class="form_container">
+    <!-- <div class="title_container" style="margin-top: -5%;">
+      <h2><b> Add New Solution</b> </h2>
+    </div> -->
+    <div class="row clearfix">
+      <div class="" style='width: 100%;'>
+        <form >
+          <fieldset>
+            <legend>Order Acknowledgement:</legend>
+            <div class="form-group row">
+                <div class="col-md-4">
+                    <label for="firstName"><strong>Customer Name</strong> </label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Please enter Customer Name" readonly value = {{this.submittedListOfData[0].inquiry_createdBy}}>
+                </div>
+                <div class="col-md-4">
+                    <label for="firstName"><strong>Customer Order Number </strong></label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Please enter Customer Order Number" placeholder="Please enter Customer Name" readonly value = {{this.submittedListOfData[0].inquiry_id}}>
+                </div>
+                <div class="col-md-4">
+                    <label for="firstName"><strong>Date</strong> </label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Please enter Date" readonly [value] = "enquiryDate | date :'MM/dd/yyyy'">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-4">
+                    <label for="firstName"><strong>Scope of supply</strong> </label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Please enter Scope of supply">
+                </div>
+                <div class="col-md-4">
+                    <label for="firstName"><strong>Price</strong> </label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Please enter Price" readonly value = {{this.submittedListOfData[0].tbl_inquiry_total_product_cost}}>
+                </div>
+                <div class="col-md-4">
+                  <label for="firstName"><strong>Taxes </strong></label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Please enter Taxes">
+              </div>
+            </div>
+            
+            <div class="form-group row">
+                <div class="col-md-4">
+                    <label for="firstName"><strong>Transportation charges</strong> </label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Please enter Transportation charges">
+                </div>
+                <div class="col-md-4">
+                    <label for="firstName"><strong>Other charges </strong></label>
+                    <input type="text" class="form-control" id="firstName" placeholder="Please enter Other charges">
+                </div>
+                <div class="col-md-4">
+                  <label for="firstName"><strong>Delivery by </strong></label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Please enter Delivery by">
+              </div>
+            </div>
+  
+            <div class="form-group row">
+              <div class="col-md-4">
+                  <label for="firstName"><strong>Delivery date</strong> </label>
+                  <input type="date" class="form-control" id="firstName" placeholder="Please enter Delivery date">
+              </div>
+              <div class="col-md-4">
+                  <label for="firstName"><strong>Delivery to </strong></label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Please enter Delivery to">
+              </div>
+              <div class="col-md-4">
+                <label for="firstName"><strong>Delivery by </strong></label>
+                <input type="text" class="form-control" id="firstName" placeholder="Please enter Delivery by">
+            </div>
+          </div>
+  
+          <div class="form-group row">
+            <div class="col-md-4">
+                <label for="firstName"><strong>Delivery location</strong> </label>
+                <input type="text" class="form-control" id="firstName" placeholder="Please enter Delivery location">
+            </div>
+            <div class="col-md-4">
+                <label for="firstName"><strong>Delivery to </strong></label>
+                <input type="text" class="form-control" id="firstName" placeholder="Please enter Delivery to">
+            </div>
+            <div class="col-md-4">
+              <label for="firstName"><strong>Delivery through </strong></label>
+              <input type="text" class="form-control" id="firstName" placeholder="Please enter Delivery through">
+          </div>
+        </div>
+  
+            <div class="form-group">
+              <label>a) Delivery subject to timely completion of activities in customers’ scope. </label><br/>
+              <label> b) Conflicting requirements / deviations from offer that need resolution including scope, delivery, price,etc. </label><br/>
+              <label> Remarks if any </label>
+              <input type="text" class="form-control" id="firstName" placeholder="Please enter Remarks if any">
+          </div>
+          <button type="submit" class="btn btn-primary"  ><strong>Submit</strong></button>
+          <button type="submit" class="btn btn-danger"  (click)="cancleAck()"><strong>Cancel</strong></button>
+           </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

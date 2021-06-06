@@ -1,0 +1,64 @@
+<div class="wrapper">
+  <div class="sidebar" data-color="danger" data-background-color="white" data-image="./assets/img/sidebar-1.jpg">
+      <app-sidebar></app-sidebar>
+      <div class="sidebar-background" style="background-image: url(./assets/img/sidebar-4.jpg)"></div>
+  </div>
+  <div class="main-panel">
+ <app-navbar></app-navbar>
+ <div style="margin-top: 8%;">
+  <div class='form'>
+    <form>
+      <fieldset>
+          <legend>Monitoring Sales Process :</legend>
+          <div class="form-group row">
+              <div class="col-md-6">
+                  <label for="firstName"><strong>Sales Type:</strong> </label>
+                  <select name="salesTypeId" class="form-control">
+                    <option> 1 Direct Sales </option>
+                    <option> 2 Marketing </option>
+                    <option> 3 Servicing </option>
+                  </select>
+              </div>
+              <div class="col-md-6">
+                  <label for="firstName"><strong>From Date: </strong></label>
+                  <input type="date" class="form-control" id="firstName" placeholder="Please enter From Date:">
+              </div>
+              
+          </div>
+          <div class="form-group row">
+              <div class="col-md-6">
+                  <label for="firstName"><strong>To Date: </strong> </label>
+                  <input type="date" class="form-control" id="firstName" placeholder="Please enter To Date:">
+              </div>
+              <div class="col-md-6">
+                  <label for="firstName"><strong>Product type :</strong> </label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Please enter Product type">
+              </div>
+              
+          </div>
+          
+          <div class="form-group row">
+              <div class="col-md-6">
+                  <label for="firstName"><strong>Amendment No.</strong> </label>
+                  <input type="text" class="form-control" id="firstName" placeholder="Please enter Amendment No.">
+              </div>
+              <div class="col-md-6">
+                  <label for="firstName"><strong>Amendment Date: </strong></label>
+                  <input type="date" class="form-control" id="firstName" placeholder="Please enter Amendment Date:">
+              </div>
+          </div>
+
+        <div class="form-group">
+            <label for="firstName"><strong>Location/Territory: </strong></label>
+            <input type="text" class="form-control" id="firstName" placeholder="Please enter Location/Territory">
+        </div>
+          
+          <button type="submit" class="btn btn-default"><strong>Submit</strong></button>
+          <button type="submit" class="btn btn-default"><strong>Reset</strong></button>
+
+      </fieldset>
+  </form>
+  </div>
+</div>
+</div>
+</div>

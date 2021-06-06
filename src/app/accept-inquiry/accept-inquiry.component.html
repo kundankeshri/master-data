@@ -1,0 +1,75 @@
+<div class="form_wrapper">
+        <div class="form_container">
+          <!-- <div class="title_container" style="margin-top: -5%;">
+            <h2><b> Add New Solution</b> </h2>
+          </div> -->
+          <div class="row clearfix">
+            <div class="" style="width: 100%;">
+              <form >
+                  <fieldset>
+                      <div id="save" class="alert alert-success well-sm" style="margin-top: 10px;width: 50%;display: none;">
+                          <i class="fa fa-check fa-lg " aria-hidden="true"></i>&nbsp; Updated Successfully.
+                      </div>
+                      <legend>Inquiry Details:</legend>
+                    <div class="form-group row">
+                            <div class="col-md-4">
+                                <label for="firstName"><strong>Inquiry No</strong> </label>
+                                <input type="text" class="form-control" id="firstName" readonly value = {{submittedListOfData[0].inquiry_id}}>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="firstName"><strong>Inquiry Date </strong></label>
+                                <input type="text" class="form-control" id="firstName" readonly  [value] = "enquiryDate | date :'MM/dd/yyyy'">
+                            </div>
+                            <div class="col-md-4">
+                              <label for="firstName"><strong>ProductList</strong> </label>
+                              <br/>
+                              <select style="width: 50%;height: 51%;" (change)="searchPrice($event)">
+                                  <option *ngFor="let skill of productList" [ngValue]="skill.id" [selected]="skill.tbl_product_name === productName" id="ip">{{skill.tbl_product_name}}</option>
+                              </select>
+                            </div>
+                         </div>
+                         <div class="form-group row">
+                                <div class="col-md-4">
+                                    <label for="firstName"><strong>Product Price Per Unit</strong> </label>
+                                    <input type="text" class="form-control" id="firstName" readonly [ngModel]="productPrice | currency:'INR':true" [ngModelOptions]="{standalone: true}">
+                                </div>
+                                <div class="col-md-4">
+                                    <label for="firstName"><strong>Number Of Units</strong> </label>
+                                    <div>
+                                          <button class="wNrY5O" [disabled]="isDisabled" (click)="subNumberOfUnit()"> – </button>
+                                          <input type="text" [(ngModel)]="noOfUnits" style="padding:0px;" [ngModelOptions]="{standalone: true}" style="margin-left: 2%;
+                                          width: 20%;
+                                          margin-right: 2%;
+                                          text-align: center;">
+                                          <button (click)="addingNumberOfUnit()"> + </button>
+                                   </div>
+                                </div>
+                                <div class="col-md-4">
+                                  <label for="firstName"><strong>Total Product Cost </strong></label>
+                                  <input type="text" class="form-control" id="firstName" readonly [ngModel]="totalProductPrice | currency:'INR':true" [ngModelOptions]="{standalone: true}">
+                              </div>
+                            </div>
+
+                            <div class="form-group row">
+                              <div class="col-md-4">
+                                  <label for="firstName"><strong>Order recd date</strong> </label>
+                                  <input type="date" class="form-control" id="firstName" placeholder="Please enter Order recd date" [ngModel]="recordDate | date:'yyyy-MM-dd'" [(ngModel)]='recordDate' [ngModelOptions]="{standalone: true}">
+                                </div>
+                              <div class="col-md-4">
+                                <label for="firstName"><strong>Order status </strong></label>
+                                <input type="text" class="form-control" id="firstName" placeholder="Please enter Order status" [(ngModel)]='status' [ngModelOptions]="{standalone: true}">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="firstName"><strong>Remarks if any </strong></label>
+                            <input type="text" class="form-control" id="firstName" placeholder="Please enter Remarks if any" [(ngModel)]='remarks' [ngModelOptions]="{standalone: true}">
+                        </div>
+                        <button type="submit" class="btn btn-primary"  (click)='enquirySubmit()'><strong>Submit</strong></button>
+                        <button type="submit" class="btn btn-danger"  (click)='enquiryCancel()'><strong>Cancel</strong></button>
+                      </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      

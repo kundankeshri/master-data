@@ -1,0 +1,119 @@
+/*================================================Layout design=================================================*/
+html, body {
+    height: 100%;
+}
+
+body {
+    padding: 50px 0;
+    background-color: #ccc;
+    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+    background-size: 50px 50px;
+}
+
+.main {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+    .main > .container {
+        background-color: rgb(255, 255, 255);
+        margin: 0px auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        -moz-box-shadow: 10px 8px 15px gray, -10px 8px 15px gray, 10px 8px 15px gray;
+        -webkit-box-shadow: 10px 8px 15px gray, -10px 8px 15px gray, 10px 8px 15px gray;
+        box-shadow: 10px 8px 15px gray, -10px 8px 15px gray, 10px 8px 15px gray;
+        min-height: 100%;
+    }
+
+.navbar-inverse {
+    background: #5f5f5f;
+}
+
+/*Prevent the Footer from Collapsing*/
+footer .navbar-nav {
+    float: left;
+    margin: 0;
+}
+
+    footer .navbar-nav > li {
+        float: left;
+    }
+
+        footer .navbar-nav > li > a {
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+/*END: Prevent the Navbar from Collapsing*/
+
+/*==========================Form Design=============================*/
+form {
+    padding: 15px;
+}
+
+.form-group > .form-group {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+    .form-group > .form-group:nth-child(n+1) {
+        padding-left: 5px;
+        padding-right: 0px;
+    }
+
+    .form-group > .form-group:first-child {
+        padding-left: 0px;
+    }
+
+.form-group > div[class*='col-'] {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+    .form-group > div[class*='col-']:nth-child(n+1) {
+        padding-left: 5px;
+        padding-right: 0px;
+    }
+
+    .form-group > div[class*='col-']:first-child {
+        padding-left: 15px;
+    }
+
+    .form-group > div[class*='col-']:last-child {
+        padding-right: 15px;
+    }
+
+@media only screen and (max-width: 768px) and (min-width: 120px) {
+
+    .form-group > div[class*='col-']:nth-child(n+1) {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+
+    .form-group > div[class*='col-']:first-child {
+        padding-right: 15px;
+    }
+
+    .form-group > div[class*='col-']:last-child {
+        padding-left: 15px;
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (max-width: 992px) and (min-width: 769px) {
+    .form-group > div[class*='col-']:nth-child(n+1) {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+    }
+
+    .form-group > div[class*='col-']:first-child {
+        padding-right: 15px;
+    }
+
+    .form-group > div[class*='col-']:last-child {
+        padding-left: 15px;
+        padding-bottom: 0px;
+    }
+}
